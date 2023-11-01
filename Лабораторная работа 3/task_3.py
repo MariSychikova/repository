@@ -2,10 +2,10 @@ def count_letters(text):
     dict_ = {}
     for letter in text.lower():
         if letter.isalpha():
-            if dict_.get(letter) is None:
-                dict_[letter] = 1
-            else:
+            if letter in dict_:
                 dict_[letter] += 1
+            else:
+                dict_[letter] = 1
 
     return dict_
 
